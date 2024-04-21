@@ -9099,6 +9099,303 @@ USDT-USD     0.26     0.25     0.28      0.27      1.00
 </div>
 </div>
 </div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h5 id="Corr-Analysis">Corr Analysis<a class="anchor-link" href="#Corr-Analysis">¶</a></h5>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>The correlation matrix for the daily returns of Bitcoin (BTC), Ethereum (ETH), XRP, Dogecoin (DOGE), and Tether (USDT) offers insights into how these cryptocurrencies move relative to each other:</p>
+<p><em>High Correlations</em></p>
+<ul>
+<li><strong>Bitcoin and Ethereum</strong>: With a correlation coefficient of 0.90, BTC and ETH show a very strong positive correlation. This suggests that they often move in the same direction at the same time. The high correlation can be attributed to their shared status as leading cryptocurrencies, which often means they are similarly influenced by market conditions, investor sentiment, and regulatory news.</li>
+<li><strong>Ethereum and XRP</strong>: ETH and XRP also exhibit a strong correlation of 0.75. This relationship indicates that movements in Ethereum often parallel those in XRP, possibly due to overlapping investor bases and their roles in similar blockchain applications.</li>
+</ul>
+<p><em>Moderate Correlations</em></p>
+<ul>
+<li><strong>XRP and Bitcoin, Dogecoin</strong>: XRP shows a correlation of 0.74 with BTC and 0.61 with DOGE. These moderate correlations suggest that while there is some alignment in how these currencies move, each has distinct factors that independently influence its price.</li>
+<li><strong>Dogecoin and Ethereum, Bitcoin</strong>: Dogecoin's correlation with ETH (0.67) and BTC (0.65) indicates moderate alignment, which may be influenced by the broader crypto market trends that affect all digital assets, albeit to varying extents.</li>
+</ul>
+<p><em>Lower Correlations w/Tether</em></p>
+<ul>
+<li><strong>All Cryptocurrencies w/Tether</strong>: Tether shows notably lower correlation coefficients with BTC (0.26), ETH (0.25), XRP (0.28), and DOGE (0.27). As a stablecoin, Tether is pegged to the US dollar and designed to maintain a constant value, which fundamentally differs from the other cryptocurrencies that are subject to more significant market fluctuations. Thus, its movements are less synchronized with those of speculative cryptocurrencies.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h4 id="FTX-Analysis">FTX Analysis<a class="anchor-link" href="#FTX-Analysis">¶</a></h4>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h5 id="FTX-Delta">FTX Delta<a class="anchor-link" href="#FTX-Delta">¶</a></h5>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># 11/11/22 Delta</span>
+<span class="n">price_on_nov_10</span> <span class="o">=</span> <span class="n">crypto_prices</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">'2022-11-10'</span><span class="p">]</span>
+<span class="n">price_on_nov_11</span> <span class="o">=</span> <span class="n">crypto_prices</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">'2022-11-11'</span><span class="p">]</span>
+
+<span class="n">daily_change_nov_11</span> <span class="o">=</span> <span class="p">(</span><span class="n">price_on_nov_11</span> <span class="o">-</span> <span class="n">price_on_nov_10</span><span class="p">)</span> <span class="o">/</span> <span class="n">price_on_nov_10</span> <span class="o">*</span> <span class="mi">100</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>BTC-USD    -3.14
+ETH-USD    -0.94
+XRP-USD    -2.92
+DOGE-USD   -5.46
+USDT-USD    0.04
+dtype: float64
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Nov. 2022 Delta</span>
+<span class="n">price_start_nov</span> <span class="o">=</span> <span class="n">crypto_prices</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">'2022-11-01'</span><span class="p">]</span>
+<span class="n">price_end_nov</span> <span class="o">=</span> <span class="n">crypto_prices</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">'2022-11-30'</span><span class="p">]</span>
+
+<span class="n">monthly_change_nov</span> <span class="o">=</span> <span class="p">(</span><span class="n">price_end_nov</span> <span class="o">-</span> <span class="n">price_start_nov</span><span class="p">)</span> <span class="o">/</span> <span class="n">price_start_nov</span> <span class="o">*</span> <span class="mi">100</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>BTC-USD    -16.19
+ETH-USD    -17.98
+XRP-USD    -12.02
+DOGE-USD   -25.05
+USDT-USD     0.01
+dtype: float64
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># FTX Delta results</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Price Change on November 11, 2022 (%):"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">daily_change_nov_11</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">Overall Price Change in November 2022 (%):"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">monthly_change_nov</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Price Change on November 11, 2022 (%):
+BTC-USD    -3.14
+ETH-USD    -0.94
+XRP-USD    -2.92
+DOGE-USD   -5.46
+USDT-USD    0.04
+dtype: float64
+
+Overall Price Change in November 2022 (%):
+BTC-USD    -16.19
+ETH-USD    -17.98
+XRP-USD    -12.02
+DOGE-USD   -25.05
+USDT-USD     0.01
+dtype: float64
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h5 id="FTX-Delta-Results">FTX Delta Results<a class="anchor-link" href="#FTX-Delta-Results">¶</a></h5>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="Price-Changes-on-November-11,-2022">Price Changes on November 11, 2022<a class="anchor-link" href="#Price-Changes-on-November-11,-2022">¶</a></h3><table>
+<thead>
+<tr>
+<th>Cryptocurrency</th>
+<th>Price Change (%)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BTC-USD</td>
+<td>-3.14</td>
+</tr>
+<tr>
+<td>ETH-USD</td>
+<td>-0.94</td>
+</tr>
+<tr>
+<td>XRP-USD</td>
+<td>-2.92</td>
+</tr>
+<tr>
+<td>DOGE-USD</td>
+<td>-5.46</td>
+</tr>
+<tr>
+<td>USDT-USD</td>
+<td>0.04</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Overall-Price-Changes-in-November-2022">Overall Price Changes in November 2022<a class="anchor-link" href="#Overall-Price-Changes-in-November-2022">¶</a></h3><table>
+<thead>
+<tr>
+<th>Cryptocurrency</th>
+<th>Monthly Change (%)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BTC-USD</td>
+<td>-16.19</td>
+</tr>
+<tr>
+<td>ETH-USD</td>
+<td>-17.98</td>
+</tr>
+<tr>
+<td>XRP-USD</td>
+<td>-12.02</td>
+</tr>
+<tr>
+<td>DOGE-USD</td>
+<td>-25.05</td>
+</tr>
+<tr>
+<td>USDT-USD</td>
+<td>0.01</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h5 id="FTX-Delta-Analysis">FTX Delta Analysis<a class="anchor-link" href="#FTX-Delta-Analysis">¶</a></h5>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p><em>Event Overview</em>:</p>
+<p>In mid-November 2022, the cryptocurrency exchange FTX filed for bankruptcy, a major event that had significant ramifications across the crypto market. The news was compounded by the stepping down of its CEO, Sam Bankman-Fried, which contributed to market instability.</p>
+<p><em>Immediate Impact</em>:</p>
+<p>The data from November 11, 2022, shows that the bankruptcy announcement had a significant immediate impact on the cryptocurrency market:</p>
+<ul>
+<li><strong>Bitcoin (BTC)</strong> and <strong>Ripple (XRP)</strong> experienced moderate declines, with Bitcoin dropping by -3.14% and XRP by -2.92%.</li>
+<li><strong>Ethereum (ETH)</strong> showed a relatively smaller decline of -0.94%, indicating some resilience compared to other major cryptocurrencies.</li>
+<li><strong>Dogecoin (DOGE)</strong> was the most affected, with a dramatic fall of -5.46%, highlighting its higher sensitivity to market shocks.</li>
+<li><strong>Tether (USDT)</strong>, being a stablecoin, remained largely unaffected with a minimal change of +0.04%, reaffirming its role in providing stability during market turbulence.</li>
+</ul>
+<p><em>Long-Term Impact</em>:</p>
+<p>The effects throughout November were more pronounced:</p>
+<ul>
+<li><strong>BTC, ETH,</strong> and <strong>XRP</strong> saw significant declines of -16.19%, -17.98%, and -12.02% respectively, indicating a tough month following the FTX crisis.</li>
+<li><strong>DOGE</strong> faced the most substantial decline at -25.05%, showing its vulnerability to prolonged market stress.</li>
+<li><strong>USDT</strong> showed negligible change (+0.01%), maintaining its peg to the US dollar, demonstrating the effectiveness of stablecoins in avoiding the volatility typical of other cryptocurrencies.</li>
+</ul>
+<p><em>Conclusion</em>:</p>
+<p>The FTX bankruptcy notably disrupted the cryptocurrency markets, with varying degrees of impact across different assets. The data underscores the volatility of speculative cryptocurrencies and the stability offered by stablecoins like Tether during crises. This event also provides insights into the relative market confidence in different cryptocurrencies, with Ethereum showing relative resilience compared to its peers.</p>
+</div>
+</div>
+</div>
+</div>
 </main>
 </body>
 </html>
