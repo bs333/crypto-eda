@@ -1,4 +1,4 @@
-# Crypto Market Analysis & Real-Estate Business Protocol Proposal
+# Crypto Market Analysis & Real-Estate Business Protocol Proposal | Application of Ethereum Blockchain
 
 ## Overview
 
